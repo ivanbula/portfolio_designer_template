@@ -1,0 +1,278 @@
+@import url('https://fonts.googleapis.com/css2?family=Pontano+Sans&display=swap');
+:root {
+    --bodyFont: 'Pontano Sans', sans-serif;
+    --transition: .3s ease;
+    --gray: #333333;
+    --darkgray: #2e2e2e;
+    --yellow: #f3cd52;
+    --lightgray: rgba(255,255,255,0.4);
+    --white: #fff;
+    --font: 16px;
+}
+
+/* global styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: var(--bodyFont);
+    background: var(--gray);
+    line-height: 1.7;
+    font-size: var(--font);
+    letter-spacing: 1.6;
+}
+a{
+    text-decoration: none;
+    transition: var(--transition);
+}
+ul li{
+    list-style: none;
+}
+.container{
+   margin: auto;
+   width: 70%;
+}
+.container::after{
+    display: block;
+    content: "";
+    clear: both;
+}
+button{
+    transition: var(--transition);
+    cursor: pointer;
+    padding: 15px 40px;
+    color: var(--darkgray);
+    background: var(--yellow);
+    text-transform: uppercase;
+    border: none;
+    font-size: 1rem;
+}
+button:hover{
+    background: var(--white);
+}
+hr{
+    border: none;
+    height: 1px;
+    width: 70%;
+    background: var(--lightgray);
+    margin: 50px auto 0 auto;
+}
+
+/* header */
+header{
+    background: var(--yellow);
+    text-align: center;
+}
+header nav{
+    padding-top: 20px;
+}
+header h1{
+    padding-bottom: 10px;
+    letter-spacing: 2px;
+    font-size: 3rem;
+    padding-top: 50px;
+}
+header h1 + p{
+    text-transform: uppercase;
+    font-size: 14px;
+    padding-bottom: 50px;
+}
+header nav ul li{
+    display: inline-block;
+    padding-left: 40px;
+}
+header nav ul li a{
+   text-transform: uppercase;
+   color: var(--gray);
+   letter-spacing: 2px;
+   font-size: 1rem;
+}
+header nav ul li a:hover{
+    color: #2b292981;
+}
+header img{
+    width: 100%;
+    border-top: 30px solid rgba(255,255,255,.5);
+    border-left: 30px solid rgba(255,255,255,.5);
+    border-right: 30px solid rgba(255,255,255,.5);
+    height: auto;
+    display: block;
+}
+
+/* services */
+.services{
+    text-align: center;
+    padding: 50px 0;
+}
+.services article{
+    width: 33%;
+    float: left;
+}
+.services h3{
+    font-size: 2rem;
+    color: var(--white);
+}
+.services p{
+    padding: 30px;
+    color: var(--lightgray);
+}
+/* portfolio */
+.portfolio{
+    text-align: center;
+    padding: 50px 0;
+}
+.portfolio h2{
+    color: var(--white);
+    font-size: 3rem;
+    letter-spacing: 2px;
+    padding-bottom: 20px;
+}
+.portfolio h2 + p{
+    color: var(--lightgray);
+    padding-bottom: 60px;
+}
+.portfolio article{
+    width: 25%;
+    float: left;
+    padding: 20px;
+}
+.portfolio img{
+    width: 100%;
+    height: auto;
+}
+.portfolio article h4{
+    color: var(--white);
+    font-size: 2rem;
+}
+.portfolio article h4 + p{
+    color: var(--lightgray);
+    margin-bottom: 20px;
+}
+/* contact */
+.contact{
+    text-align: center;
+    padding: 50px 0;
+}
+.contact h2{
+    color: var(--white);
+    font-size: 3rem;
+    letter-spacing: 2px;
+    padding-bottom: 20px;
+}
+.contact h2 + p{
+    color: var(--lightgray);
+    padding-bottom: 30px;
+}
+.contact form{
+    width: 50%;
+    margin: auto;
+}
+.contact form input,
+.contact form textarea{
+    display: block;
+    width: 100%;
+    margin: 15px 0;
+    background: var(--darkgray);
+    font-size: 1.1rem;
+    font-family: var(--bodyFont);
+    padding: 20px;
+    border: none;
+    color: var(--lightgray);
+}
+/* footer */
+footer{
+    text-align: center;
+    padding: 50px 0;
+}
+footer h2{
+    color: var(--white);
+    font-size: 3rem;
+    letter-spacing: 2px;
+    padding-bottom: 20px;
+}
+footer h2 + p{
+    color: var(--lightgray);
+    padding-bottom: 30px;
+}
+footer i{
+    font-size: 1.5rem;
+    padding: 15px;
+    background: var(--yellow);
+    color: var(--gray);
+    margin: 20px;
+}
+.copy{
+    padding: 50px;
+    color: var(--lightgray);
+}
+
+/* responsive */
+
+@media (max-width: 767px){
+    .container {
+        width: 90%;
+    }
+    header nav ul li {
+        padding-left: 10px;
+    }
+    header nav ul li a {
+        font-size: 0.8rem;
+    }
+    header h1 {
+        font-size: 2rem;
+        padding-top: 30px;
+    }
+    header h1 + p {
+        padding-bottom: 30px;
+    }
+    .services article {
+        width: 100%;
+        float: none;
+    }
+    button {
+        margin-bottom: 15px;
+    }
+    .services {
+        padding: 30px 0 0 0;
+    }
+    .portfolio h2 {
+        font-size: 2rem;
+    }
+    .portfolio article {
+        width: 100%;
+        float: none;
+    }
+    .portfolio {
+        text-align: center;
+        padding: 30px 0 0 0;
+    }
+    .contact {
+        padding: 30px 0 0 0;
+    }
+    .contact h2 {
+        font-size: 2rem;
+    }
+    .contact form input, .contact form textarea {
+        margin: 10px 0;
+        font-size: 1rem;
+        padding: 15px;
+    }
+    footer {
+        padding: 20px 0;
+    }
+    footer h2 {
+        font-size: 2rem;
+    }
+    .copy {
+        padding: 30px;
+    }
+    footer i {
+        padding: 10px;
+        margin: 10px;
+    }
+    .contact form {
+        width: 100%;
+    }
+}
